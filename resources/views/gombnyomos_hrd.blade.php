@@ -12,6 +12,7 @@
                 <th>Típus</th>
                 <th>Hőmérséklet</th>
                 <th>Páratartalom</th>
+                <th>Levegő minöség</th>
                 <th>Rögzités ideje</th>
             </tr>
             <tr>
@@ -21,6 +22,7 @@
                         <td>{{$nyomo->tipus}}</td>
                         <td>{{$nyomo->homerseklet}}&deg;c</td>
                         <td>{{$nyomo->paratartalom}}%</td>
+                        <td>{{$nyomo->legminoseg}} ppm</td>
                         <td>{{$nyomo->rogzetesideje}}</td>
                     </tr>
                 @endforeach

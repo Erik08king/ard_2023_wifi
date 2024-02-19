@@ -16,6 +16,7 @@ return new class extends Migration
             $table->char('tipus');
             $table->float('homerseklet',4,2);
             $table->integer('paratartalom');
+            $table->integer('legminoseg');
             $table->dateTime('rogzetesideje');
         });
     }

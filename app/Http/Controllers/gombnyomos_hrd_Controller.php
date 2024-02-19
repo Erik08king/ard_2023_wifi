@@ -26,13 +26,15 @@ class gombnyomos_hrd_Controller extends Controller
                 [
                     "tipus"=>"required",
                     "homerseklet"=>"required",
-                    "paratartalom"=>"required"
+                    "paratartalom"=>"required",
+                    "legminoseg"=>"required"
     
                 ],
                 [
                     "tipus.required"=>" kotelezo tipus megadasa",
                     "homerseklet.required"=>" kotelezo homerseklet megadasa",
-                    "paratartalom.required"=>" kotelezo paratartalom megadasa"
+                    "paratartalom.required"=>" kotelezo paratartalom megadasa",
+                    "legminoseg.required"=>" kotelezo paratartalom megadasa"
                 ]
     
             );
@@ -46,6 +48,7 @@ class gombnyomos_hrd_Controller extends Controller
                     $adatok_new->tipus = $req->input('tipus');
                     $adatok_new->homerseklet = $req->input("homerseklet");
                     $adatok_new->paratartalom = $req->input("paratartalom");
+                    $adatok_new->legminoseg = $req->input("legminoseg");
                     $adatok_new->rogzetesideje = date('Y-m-d H:i:s');
                     $adatok_new->save();
                     return response()->json($adatok_new,201);
