@@ -16,15 +16,31 @@
                 <th>Rögzités ideje</th>
             </tr>
             <tr>
+
+
                 @foreach ($nyomogombosok_hrd as $nyomo)
-                    <tr>
-                        <td>{{$nyomo->ny_id}}</td>
-                        <td>{{$nyomo->tipus}}</td>
-                        <td>{{$nyomo->homerseklet}}&deg;c</td>
-                        <td>{{$nyomo->paratartalom}}%</td>
-                        <td>{{$nyomo->legminoseg}} ppm</td>
-                        <td>{{$nyomo->rogzetesideje}}</td>
-                    </tr>
+
+                    @if ($nyomo->homerseklet == -99)
+                        <tr>
+                            <td>{{$nyomo->ny_id}}</td>
+                            <td>{{$nyomo->tipus}}</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>{{$nyomo->legminoseg}} ppm</td>
+                            <td>{{$nyomo->rogzetesideje}}</td>
+                        </tr>
+                    @else
+                        <tr>
+                            <td>{{$nyomo->ny_id}}</td>
+                            <td>{{$nyomo->tipus}}</td>
+                            <td>{{$nyomo->homerseklet}}&deg;c</td>
+                            <td>{{$nyomo->paratartalom}}%</td>
+                            <td>-</td>
+                            <td>{{$nyomo->rogzetesideje}}</td>
+                        </tr>
+                    @endif
+    
+
                 @endforeach
         </table>
         {{$nyomogombosok_hrd->links()}}
