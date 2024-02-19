@@ -2,4 +2,4 @@
 @section('title','Főoldal')
 @section('content')
     
-@endsection
+@endsection 

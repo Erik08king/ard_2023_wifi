@@ -2,6 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomesekletController;
+use App\Http\Controllers\legmenosegController;
+use App\Http\Controllers\TavolsagController;
+use App\Http\Controllers\gombnyomos_hrd_Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +21,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post("/homerseklet/beszuras",[HomesekletController::class,'create']);
+Route::post("/legmenoseg/beszuras",[legmenosegController::class,'create']);
+Route::post("/tavolsag/beszuras",[TavolsagController::class,'create']);
+Route::post("/gombnyomos_hrd/beszuras",[gombnyomos_hrd_Controller::class,'create']);
