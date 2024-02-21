@@ -5,6 +5,7 @@ use App\Http\Controllers\HomesekletController;
 use App\Http\Controllers\legmenosegController;
 use App\Http\Controllers\TavolsagController;
 use App\Http\Controllers\gombnyomos_hrd_Controller;
+use App\Http\Controllers\rgbsendtowemosController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -14,3 +15,5 @@ Route::get('/homerseklet',[HomesekletController::class, 'index'])->name('homerse
 Route::get('/legmenoseg',[legmenosegController::class, 'index'])->name('legmenoseg');
 Route::get('/tavolsag',[TavolsagController::class, 'index'])->name('tavolsag');
 Route::get('/gombnyomos_hrd',[gombnyomos_hrd_Controller::class, 'index'])->name('gombnyomos_homoere_paratartalom_and_ppm');
+Route::get('/rgbsendtowemos',[rgbsendtowemosController::class, 'index'])->name('rgbsendtowemos');
+Route::post('/sendCommand', 'rgbsendtowemosController@sendCommand');

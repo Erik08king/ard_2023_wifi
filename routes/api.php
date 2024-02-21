@@ -6,6 +6,7 @@ use App\Http\Controllers\HomesekletController;
 use App\Http\Controllers\legmenosegController;
 use App\Http\Controllers\TavolsagController;
 use App\Http\Controllers\gombnyomos_hrd_Controller;
+use App\Http\Controllers\rgbsendtowemosController;
 
 /*
 |--------------------------------------------------------------------------

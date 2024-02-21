@@ -30,9 +30,10 @@
                     <li><a href="{{route('legmenoseg')}}">Levegá minésége</a></li>
                     <li><a href="{{route('tavolsag')}}">Távolság</a></li>
                     <li><a href="{{route('gombnyomos_homoere_paratartalom_and_ppm')}}">Gombnyomos páratartalom, hőmérés, és legmenőség</a></li>
+                    <li><a href="{{route('rgbsendtowemos')}}">RGB kapcsolás Wemos</a></li>
                 </ul>
             </div>
-            <div class="col-10 bg-secondary">
+            <div class="col-10 bg-secondary p-4">
                 @yield('content')
             </div>
         </div>
